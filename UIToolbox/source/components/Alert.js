@@ -2,19 +2,17 @@
 
 import { helpers } from '../Core.js'
 
-
-// ** TO BE FIXED ** //
-const Divider = () => {
+const Alert = (title, content, ) => {
     const component = helpers.define(
-        'hr',
+        'div',
         {
-            'data-uitb': 'Divider'
+            'data-uitb': 'Alert'
         }
     )
 
     const createdComponent = helpers.create(component)
-
+    
     return createdComponent
 }
 
-export { Divider }
+export { Alert }

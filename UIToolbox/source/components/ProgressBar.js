@@ -2,19 +2,17 @@
 
 import { helpers } from '../Core.js'
 
-const Toolbar = (...content) => {
+const ProgressBar = () => {
     const component = helpers.define(
         'div',
         {
-            'data-uitb': 'Toolbar'
+            'data-uitb': 'ProgressBar'
         }
     )
-    
+
     const createdComponent = helpers.create(component)
-    createdComponent.append(...content)
-        
 
     return createdComponent
 }
 
-export { Toolbar }
+export { ProgressBar }

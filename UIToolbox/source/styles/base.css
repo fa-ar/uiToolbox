@@ -50,6 +50,16 @@
     }
 }
 
+@keyframes popup-remove-animation {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
 @keyframes fade-animation {
     from {
         opacity: 0;
@@ -78,6 +88,7 @@
     border: none;
     transition: all var(--speed-n) ease-in-out;
     z-index: 0;
+    overflow: hidden;
 }
 
 [data-uitb='Frame'] {
@@ -100,18 +111,18 @@
 }
 
 [data-uitb='GFrame'] {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    width: 150px;
-    height: 50px;
+    width: fit-content;
+    height: fit-content;
     padding: var(--size-n);
     margin: 0%;
     border: 1.5px solid;
     border-radius: var(--size-xs);
     transition: all var(--speed-n) ease-in-out;
-    z-index: 1;
+    z-index: 2;
     filter: drop-shadow(2px 2px 2px #000000);
     animation: popup-animation var(--speed-xs) linear; 
 }
@@ -154,7 +165,7 @@
     display: inline-flex;
     flex-direction: column;
     width: fit-content;
-    min-width: 25px;
+    min-width: fit-content;
     height: auto;
     min-height: 15px;
     padding: var(--size-s);
@@ -234,6 +245,10 @@
     z-index: 1;
 }
 
+
+[data-type='ProgressBar'] {
+
+}
 
 @media (prefers-color-scheme: light) {
     [data-uitb='UserInterface'] {

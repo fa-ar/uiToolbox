@@ -2,7 +2,7 @@
 
 import { helpers } from './source/Core.js'
 import { ui } from './source/Toolbox.js'
-import { YFrame } from './source/components/YFrame.js'
+
 
 console.log(helpers.root)
 
@@ -18,13 +18,9 @@ ui('Render',
                 ),
                 ui('SFrame',
                     ui('YFrame',
-                        ui('GFrame',), 
                         ui('XFrame',
                             ui('Button', 'Call Frame', 
-                                () => { ui('Frame', 'Opened Frame',
-                                    ui('Button', 'close')
-                                ).margin('0 10px 10px 10px')._id('test').open() }
-                            ).pill(),
+                                () => { ui('GFrame', ui('XFrame', ui('Button', 'Open', ()=>{ui('GFrame', ui('Button', 'Open', ()=>{ui('GFrame').open()})).open()}))).open().width('300px').height('300px').bottom('0px')}).pill(),
                         ),
                         ui('Button', 'Default'),
                         ui('Button', 'plain', () => {}).styleType('plain'),

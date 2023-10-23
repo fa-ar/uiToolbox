@@ -20,6 +20,10 @@ const Button = (label, action) => {
             return createdComponent
         },
 
+        label: (value) => {
+            createdComponent.innerText = valu
+        },
+
         styleType: (type) => {
             switch (type) {
                 case 'plain':
