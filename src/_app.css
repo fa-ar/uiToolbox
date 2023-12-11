@@ -1,0 +1,79 @@
+html,
+body {
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    min-width: 100vw;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    line-height: 2px;
+    overflow: hidden;
+}
+
+:root {
+    --color-a: #3e3e3e;
+    --color-b: #bebeb4;
+    --color-c: #fffcf1;
+    --color-d: #73577e;
+    --color-e: #6a94b1;
+    --color-f: #87bf72;
+    --color-g: #ffdd7e;
+    --color-h: #f49461;
+    --color-i: #d76c6c;
+    --size-inf: 100%;
+    --size-xl: 21px;
+    --size-l: 13px;
+    --size-m: 8px;
+    --size-n: 5px;
+    --size-s: 3px;
+    --size-xs: 2px;
+    --size-xxs: 1px;
+
+    --default-background-color: var(--color-f);
+    --default-color: var(--color-a);
+    --default-padding: var(--size-n);
+    --default-margin: var(--size-n);
+}
+
+mark {
+    display: inline;
+}
+
+[data-id='editorTitle'] {
+    position: absolute;
+    display: inline;
+    width: fit-content;
+    height: fit-content;
+}
+
+br {
+    line-height: 1;
+}
+
+.x {
+    min-width: 100%;
+    min-height: 2em;
+}
+
+[data-id='editorHighlights']::-webkit-scrollbar-track,
+[data-id='editorHighlights']::-webkit-scrollbar-track-piece {
+    color: transparent;
+    background-color: transparent;
+}
+
+.editorItem {
+    position: relative;
+    display: inline;
+    height: fit-content;
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+}
+
+.hi {
+    color: 'blue';
+}
